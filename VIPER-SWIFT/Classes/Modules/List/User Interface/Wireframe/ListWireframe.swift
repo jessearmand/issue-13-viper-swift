@@ -31,8 +31,8 @@ class ListWireframe : NSObject {
     
     func listViewControllerFromStoryboard() -> ListViewController {
         let storyboard = mainStoryboard()
-        let viewController = storyboard.instantiateViewControllerWithIdentifier(ListViewControllerIdentifier) as ListViewController
-        return viewController
+        let viewController = storyboard.instantiateViewControllerWithIdentifier(ListViewControllerIdentifier) as? ListViewController
+        return viewController!
     }
     
     func mainStoryboard() -> UIStoryboard {
